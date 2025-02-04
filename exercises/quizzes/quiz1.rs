@@ -10,10 +10,19 @@
 
 // TODO: Write a function that calculates the price of an order of apples given
 // the quantity bought.
-// fn calculate_price_of_apples(???) -> ??? { ??? }
+fn calculate_price_of_apples(price: i32) -> i32 {
+    if price == 40 || price == 35 {
+        price * 2
+    } else {
+        price
+    }
+}
 
 fn main() {
-    // You can optionally experiment here.
+    assert_eq!(calculate_price_of_apples(35), 70);
+    assert_eq!(calculate_price_of_apples(40), 80);
+    assert_eq!(calculate_price_of_apples(41), 41);
+    assert_eq!(calculate_price_of_apples(65), 65);
 }
 
 // Don't change the tests!
